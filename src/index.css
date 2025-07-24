@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,33 +10,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Professional portfolio color palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Deep navy blue for professional feel */
+    --primary: 215 85% 15%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Light gray for subtle backgrounds */
+    --secondary: 210 15% 96%;
+    --secondary-foreground: 215 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted colors for secondary text */
+    --muted: 210 15% 95%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Warm orange accent for visual interest */
+    --accent: 25 85% 55%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 215 85% 15%;
+
+    /* Professional gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215 85% 15%), hsl(215 70% 25%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 85% 55%), hsl(35 85% 60%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 15% 98%));
+
+    /* Elegant shadows */
+    --shadow-soft: 0 2px 20px -5px hsl(215 25% 15% / 0.1);
+    --shadow-medium: 0 8px 30px -8px hsl(215 25% 15% / 0.15);
+    --shadow-large: 0 20px 40px -12px hsl(215 25% 15% / 0.2);
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --radius: 0.5rem;
 
@@ -56,26 +77,38 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode professional palette */
+    --background: 215 30% 8%;
+    --foreground: 210 15% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 25% 10%;
+    --card-foreground: 210 15% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 25% 10%;
+    --popover-foreground: 210 15% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 15% 92%;
+    --primary-foreground: 215 85% 15%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 215 20% 15%;
+    --secondary-foreground: 210 15% 92%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 20% 12%;
+    --muted-foreground: 215 10% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Accent remains warm but adjusted for dark mode */
+    --accent: 25 85% 58%;
+    --accent-foreground: 215 30% 8%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215 25% 10%), hsl(215 30% 18%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 85% 58%), hsl(35 85% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215 30% 8%), hsl(215 25% 10%));
+
+    /* Dark shadows with subtle glow */
+    --shadow-soft: 0 2px 20px -5px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 8px 30px -8px hsl(0 0% 0% / 0.4);
+    --shadow-large: 0 20px 40px -12px hsl(0 0% 0% / 0.5);
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
