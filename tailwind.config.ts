@@ -70,6 +70,7 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-subtle': 'var(--gradient-subtle)',
+				'gradient-tech': 'var(--gradient-tech)',
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',

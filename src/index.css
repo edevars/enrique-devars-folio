@@ -10,30 +10,30 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Professional portfolio color palette */
+    /* Vibrant tech color palette */
     --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    --foreground: 220 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 220 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 220 25% 15%;
 
-    /* Deep navy blue for professional feel */
-    --primary: 215 85% 15%;
+    /* Electric blue for modern tech feel */
+    --primary: 200 100% 50%;
     --primary-foreground: 0 0% 98%;
 
-    /* Light gray for subtle backgrounds */
-    --secondary: 210 15% 96%;
-    --secondary-foreground: 215 25% 15%;
+    /* Light background with subtle tech tint */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 25% 15%;
 
-    /* Muted colors for secondary text */
-    --muted: 210 15% 95%;
-    --muted-foreground: 215 15% 45%;
+    /* Muted colors with tech undertones */
+    --muted: 210 20% 95%;
+    --muted-foreground: 220 15% 45%;
 
-    /* Warm orange accent for visual interest */
-    --accent: 25 85% 55%;
+    /* Bright purple/magenta accent for vibrant contrast */
+    --accent: 280 100% 60%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -41,17 +41,18 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 215 85% 15%;
+    --ring: 200 100% 50%;
 
-    /* Professional gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(215 85% 15%), hsl(215 70% 25%));
-    --gradient-accent: linear-gradient(135deg, hsl(25 85% 55%), hsl(35 85% 60%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 15% 98%));
+    /* Vibrant tech gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(200 100% 50%), hsl(190 100% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(280 100% 60%), hsl(300 100% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    --gradient-tech: linear-gradient(135deg, hsl(200 100% 50%), hsl(280 100% 60%));
 
-    /* Elegant shadows */
-    --shadow-soft: 0 2px 20px -5px hsl(215 25% 15% / 0.1);
-    --shadow-medium: 0 8px 30px -8px hsl(215 25% 15% / 0.15);
-    --shadow-large: 0 20px 40px -12px hsl(215 25% 15% / 0.2);
+    /* Modern shadows with color tints */
+    --shadow-soft: 0 2px 20px -5px hsl(200 100% 50% / 0.15);
+    --shadow-medium: 0 8px 30px -8px hsl(200 100% 50% / 0.2);
+    --shadow-large: 0 20px 40px -12px hsl(200 100% 50% / 0.25);
 
     /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -77,38 +78,40 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Dark mode professional palette */
-    --background: 215 30% 8%;
-    --foreground: 210 15% 92%;
+    /* Vibrant dark mode tech palette */
+    --background: 220 30% 5%;
+    --foreground: 210 20% 95%;
 
-    --card: 215 25% 10%;
-    --card-foreground: 210 15% 92%;
+    --card: 220 25% 8%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 215 25% 10%;
-    --popover-foreground: 210 15% 92%;
+    --popover: 220 25% 8%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 210 15% 92%;
-    --primary-foreground: 215 85% 15%;
+    /* Bright cyan for dark mode primary */
+    --primary: 190 100% 65%;
+    --primary-foreground: 220 30% 5%;
 
-    --secondary: 215 20% 15%;
-    --secondary-foreground: 210 15% 92%;
+    --secondary: 220 20% 12%;
+    --secondary-foreground: 210 20% 95%;
 
-    --muted: 215 20% 12%;
-    --muted-foreground: 215 10% 65%;
+    --muted: 220 20% 10%;
+    --muted-foreground: 220 10% 70%;
 
-    /* Accent remains warm but adjusted for dark mode */
-    --accent: 25 85% 58%;
-    --accent-foreground: 215 30% 8%;
+    /* Bright magenta accent for dark mode */
+    --accent: 300 100% 70%;
+    --accent-foreground: 220 30% 5%;
 
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(215 25% 10%), hsl(215 30% 18%));
-    --gradient-accent: linear-gradient(135deg, hsl(25 85% 58%), hsl(35 85% 65%));
-    --gradient-subtle: linear-gradient(180deg, hsl(215 30% 8%), hsl(215 25% 10%));
+    /* Vibrant dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(190 100% 65%), hsl(200 100% 75%));
+    --gradient-accent: linear-gradient(135deg, hsl(300 100% 70%), hsl(320 100% 75%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 30% 5%), hsl(220 25% 8%));
+    --gradient-tech: linear-gradient(135deg, hsl(190 100% 65%), hsl(300 100% 70%));
 
-    /* Dark shadows with subtle glow */
-    --shadow-soft: 0 2px 20px -5px hsl(0 0% 0% / 0.3);
-    --shadow-medium: 0 8px 30px -8px hsl(0 0% 0% / 0.4);
-    --shadow-large: 0 20px 40px -12px hsl(0 0% 0% / 0.5);
+    /* Glowing shadows for dark mode */
+    --shadow-soft: 0 2px 20px -5px hsl(190 100% 65% / 0.2);
+    --shadow-medium: 0 8px 30px -8px hsl(190 100% 65% / 0.3);
+    --shadow-large: 0 20px 40px -12px hsl(190 100% 65% / 0.4);
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
