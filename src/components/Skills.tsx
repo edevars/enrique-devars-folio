@@ -1,10 +1,10 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
-import { portfolioConfig } from '@/config/portfolio';
+import { usePortfolioContent } from '@/hooks/use-portfolio-content';
 
 export function Skills() {
   const { t } = useLanguage();
-  const { skills } = portfolioConfig;
+  const { skills } = usePortfolioContent();
 
   return (
     <section id="skills" className="py-20 bg-background">
@@ -26,7 +26,7 @@ export function Skills() {
               >
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-6 text-center bg-gradient-accent bg-clip-text text-transparent">
-                    {category.title}
+                    {t(`skills.${category.title.toLowerCase().replace(/\s+/g, '').replace(/&/g, '')}`)}
                   </h3>
                   
                   <div className="space-y-4">

@@ -1,9 +1,9 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { portfolioConfig } from '@/config/portfolio';
+import { usePortfolioContent } from '@/hooks/use-portfolio-content';
 
 export function Footer() {
   const { t } = useLanguage();
-  const { personal, footer } = portfolioConfig;
+  const { personal } = usePortfolioContent();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -12,11 +12,11 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="mb-4 md:mb-0">
             <p className="text-sm">
-              © {currentYear} {personal.name}. {footer.copyright}
+              © {currentYear} {personal.name}. {t('footer.copyright')}
             </p>
           </div>
           <div className="text-sm text-primary-foreground/80">
-            {footer.builtWith}
+            {t('footer.builtWith')}
           </div>
         </div>
       </div>

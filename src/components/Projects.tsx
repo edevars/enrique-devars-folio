@@ -2,11 +2,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
-import { portfolioConfig } from '@/config/portfolio';
+import { usePortfolioContent } from '@/hooks/use-portfolio-content';
 
 export function Projects() {
   const { t } = useLanguage();
-  const { projects } = portfolioConfig;
+  const { projects } = usePortfolioContent();
 
   return (
     <section id="projects" className="py-20 bg-muted/30">

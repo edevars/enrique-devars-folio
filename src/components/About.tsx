@@ -1,11 +1,11 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { getIconComponent } from '@/lib/icon-utils';
-import { portfolioConfig } from '@/config/portfolio';
+import { usePortfolioContent } from '@/hooks/use-portfolio-content';
 
 export function About() {
   const { t } = useLanguage();
-  const { about } = portfolioConfig;
+  const { about } = usePortfolioContent();
 
   return (
     <section id="about" className="py-20 bg-background">
@@ -43,7 +43,7 @@ export function About() {
                         <Icon className="h-6 w-6 text-accent-foreground" />
                       </div>
                       <h3 className="font-bold text-lg mb-2">{highlight.title}</h3>
-                      <p className="text-sm text-muted-foreground">{highlight.description}</p>
+                      <p className="text-sm text-muted-foreground">{t(`about.highlights.${highlight.description.toLowerCase().replace(/\s+/g, '')}`)}</p>
                     </CardContent>
                   </Card>
                 );

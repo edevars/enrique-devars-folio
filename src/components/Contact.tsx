@@ -35,7 +35,7 @@ export function Contact() {
     
     toast({
       title: t('contact.success'),
-      description: "I'll get back to you as soon as possible.",
+      description: t('contact.successDescription'),
     });
 
     setFormData({ name: '', email: '', message: '' });
@@ -45,19 +45,19 @@ export function Contact() {
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
+      label: t('contact.emailLabel'),
       value: contact.email,
       href: `mailto:${contact.email}`
     },
     {
       icon: MapPin,
-      label: 'Location',
+      label: t('contact.locationLabel'),
       value: contact.location,
       href: null
     },
     {
       icon: Phone,
-      label: 'Phone',
+      label: t('contact.phoneLabel'),
       value: contact.phone,
       href: `tel:${contact.phone.replace(/\s/g, '')}`
     }
@@ -66,12 +66,12 @@ export function Contact() {
   const socialLinks = [
     {
       icon: Github,
-      label: 'GitHub',
+      label: t('contact.githubLabel'),
       href: contact.social.github
     },
     {
       icon: Linkedin,
-      label: 'LinkedIn',
+      label: t('contact.linkedinLabel'),
       href: contact.social.linkedin
     }
   ];
@@ -94,7 +94,7 @@ export function Contact() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
+                <h3 className="text-2xl font-bold mb-6">{t('contact.getInTouch')}</h3>
                 <div className="space-y-4">
                   {contactInfo.map((info, index) => {
                     const Icon = info.icon;
@@ -123,7 +123,7 @@ export function Contact() {
 
               {/* Social Links */}
               <div>
-                <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
+                <h4 className="text-lg font-semibold mb-4">{t('contact.followMe')}</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => {
                     const Icon = social.icon;
@@ -158,7 +158,7 @@ export function Contact() {
                       onChange={handleInputChange}
                       required
                       className="w-full"
-                      placeholder="Your name"
+                      placeholder={t('contact.namePlaceholder')}
                     />
                   </div>
 
@@ -174,7 +174,7 @@ export function Contact() {
                       onChange={handleInputChange}
                       required
                       className="w-full"
-                      placeholder="your.email@example.com"
+                      placeholder={t('contact.emailPlaceholder')}
                     />
                   </div>
 
@@ -190,7 +190,7 @@ export function Contact() {
                       required
                       rows={5}
                       className="w-full resize-none"
-                      placeholder="Tell me about your project..."
+                      placeholder={t('contact.messagePlaceholder')}
                     />
                   </div>
 
@@ -199,7 +199,7 @@ export function Contact() {
                     disabled={isSubmitting}
                     className="w-full bg-gradient-accent hover:opacity-90 text-accent-foreground border-0 shadow-medium transition-all duration-300 hover:scale-[1.02]"
                   >
-                    {isSubmitting ? 'Sending...' : t('contact.send')}
+                    {isSubmitting ? t('contact.sending') : t('contact.send')}
                   </Button>
                 </form>
               </CardContent>

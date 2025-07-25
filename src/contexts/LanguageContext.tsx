@@ -19,6 +19,7 @@ const translations = {
     
     // Home section
     'home.cta': 'Get In Touch',
+    'home.downloadCv': 'Download CV',
     
     // About section
     'about.title': 'About Me',
@@ -41,7 +42,29 @@ const translations = {
     'contact.email': 'Email',
     'contact.message': 'Message',
     'contact.send': 'Send Message',
+    'contact.sending': 'Sending...',
     'contact.success': 'Thank you! Your message has been sent.',
+    'contact.successDescription': 'I\'ll get back to you as soon as possible.',
+    'contact.getInTouch': 'Get in Touch',
+    'contact.followMe': 'Follow Me',
+    'contact.namePlaceholder': 'Your name',
+    'contact.emailPlaceholder': 'your.email@example.com',
+    'contact.messagePlaceholder': 'Tell me about your project...',
+    'contact.emailLabel': 'Email',
+    'contact.locationLabel': 'Location',
+    'contact.phoneLabel': 'Phone',
+    'contact.githubLabel': 'GitHub',
+    'contact.linkedinLabel': 'LinkedIn',
+    
+    // Footer
+    'footer.copyright': 'All rights reserved.',
+    'footer.builtWith': 'Built with ❤️ using React & TypeScript',
+    
+    // About highlights
+    'about.highlights.experience': 'Professional Experience',
+    'about.highlights.projects': 'Successfully Delivered',
+    'about.highlights.tech': 'Latest Technologies',
+    'about.highlights.quality': 'Best Practices',
   },
   es: {
     // Navigation
@@ -53,6 +76,7 @@ const translations = {
     
     // Home section
     'home.cta': 'Contáctame',
+    'home.downloadCv': 'Descargar CV',
     
     // About section
     'about.title': 'Acerca de Mí',
@@ -75,7 +99,29 @@ const translations = {
     'contact.email': 'Correo',
     'contact.message': 'Mensaje',
     'contact.send': 'Enviar Mensaje',
+    'contact.sending': 'Enviando...',
     'contact.success': '¡Gracias! Tu mensaje ha sido enviado.',
+    'contact.successDescription': 'Te responderé lo antes posible.',
+    'contact.getInTouch': 'Ponte en Contacto',
+    'contact.followMe': 'Sígueme',
+    'contact.namePlaceholder': 'Tu nombre',
+    'contact.emailPlaceholder': 'tu.email@ejemplo.com',
+    'contact.messagePlaceholder': 'Cuéntame sobre tu proyecto...',
+    'contact.emailLabel': 'Correo',
+    'contact.locationLabel': 'Ubicación',
+    'contact.phoneLabel': 'Teléfono',
+    'contact.githubLabel': 'GitHub',
+    'contact.linkedinLabel': 'LinkedIn',
+    
+    // Footer
+    'footer.copyright': 'Todos los derechos reservados.',
+    'footer.builtWith': 'Construido con ❤️ usando React & TypeScript',
+    
+    // About highlights
+    'about.highlights.experience': 'Experiencia Profesional',
+    'about.highlights.projects': 'Proyectos Entregados',
+    'about.highlights.tech': 'Tecnologías Modernas',
+    'about.highlights.quality': 'Mejores Prácticas',
   }
 };
 

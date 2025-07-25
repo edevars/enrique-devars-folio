@@ -2,10 +2,12 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
 import { portfolioConfig } from '@/config/portfolio';
+import { usePortfolioContent } from '@/hooks/use-portfolio-content';
 
 export function Hero() {
   const { t } = useLanguage();
-  const { personal, contact } = portfolioConfig;
+  const { contact } = portfolioConfig;
+  const { personal } = usePortfolioContent();
 
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -46,7 +48,7 @@ export function Hero() {
                   asChild
                 >
                   <a href={personal.cvUrl} target="_blank" rel="noopener noreferrer">
-                    Download CV
+                    {t('home.downloadCv')}
                   </a>
                 </Button>
               )}
