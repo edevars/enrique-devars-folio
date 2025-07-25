@@ -6,10 +6,12 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, MapPin, Phone, Github, Linkedin } from 'lucide-react';
+import { portfolioConfig } from '@/config/portfolio';
 
 export function Contact() {
   const { t } = useLanguage();
   const { toast } = useToast();
+  const { contact } = portfolioConfig;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -44,20 +46,20 @@ export function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'enrique@example.com',
-      href: 'mailto:enrique@example.com'
+      value: contact.email,
+      href: `mailto:${contact.email}`
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Madrid, Spain',
+      value: contact.location,
       href: null
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+34 123 456 789',
-      href: 'tel:+34123456789'
+      value: contact.phone,
+      href: `tel:${contact.phone.replace(/\s/g, '')}`
     }
   ];
 
@@ -65,12 +67,12 @@ export function Contact() {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/enriquedevars'
+      href: contact.social.github
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/enriquedevars'
+      href: contact.social.linkedin
     }
   ];
 

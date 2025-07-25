@@ -18,15 +18,10 @@ const translations = {
     'nav.contact': 'Contact',
     
     // Home section
-    'home.greeting': 'Hello, I\'m',
-    'home.title': 'Software Engineer',
-    'home.subtitle': 'Building elegant solutions with modern technologies',
     'home.cta': 'Get In Touch',
     
     // About section
     'about.title': 'About Me',
-    'about.description': 'I\'m a passionate software engineer with over 5 years of experience building web applications and digital solutions. I specialize in React, TypeScript, and modern web technologies, with a focus on creating user-friendly, scalable, and maintainable applications.',
-    'about.experience': 'My journey in software development started with a curiosity about how things work behind the scenes. Today, I help businesses transform their ideas into digital reality, working with cross-functional teams to deliver high-quality software solutions.',
     
     // Projects section
     'projects.title': 'Featured Projects',
@@ -47,9 +42,6 @@ const translations = {
     'contact.message': 'Message',
     'contact.send': 'Send Message',
     'contact.success': 'Thank you! Your message has been sent.',
-    
-    // Footer
-    'footer.rights': 'All rights reserved.',
   },
   es: {
     // Navigation
@@ -60,15 +52,10 @@ const translations = {
     'nav.contact': 'Contacto',
     
     // Home section
-    'home.greeting': 'Hola, soy',
-    'home.title': 'Ingeniero de Software',
-    'home.subtitle': 'Construyendo soluciones elegantes con tecnologías modernas',
     'home.cta': 'Contáctame',
     
     // About section
     'about.title': 'Acerca de Mí',
-    'about.description': 'Soy un ingeniero de software apasionado con más de 5 años de experiencia desarrollando aplicaciones web y soluciones digitales. Me especializo en React, TypeScript y tecnologías web modernas, enfocándome en crear aplicaciones amigables, escalables y mantenibles.',
-    'about.experience': 'Mi camino en el desarrollo de software comenzó con la curiosidad sobre cómo funcionan las cosas detrás de escena. Hoy, ayudo a las empresas a transformar sus ideas en realidad digital, trabajando con equipos multifuncionales para entregar soluciones de software de alta calidad.',
     
     // Projects section
     'projects.title': 'Proyectos Destacados',
@@ -89,9 +76,6 @@ const translations = {
     'contact.message': 'Mensaje',
     'contact.send': 'Enviar Mensaje',
     'contact.success': '¡Gracias! Tu mensaje ha sido enviado.',
-    
-    // Footer
-    'footer.rights': 'Todos los derechos reservados.',
   }
 };
 

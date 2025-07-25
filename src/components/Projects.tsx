@@ -2,39 +2,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
-import ecommerceImg from '@/assets/project-ecommerce.jpg';
-import dashboardImg from '@/assets/project-dashboard.jpg';
-import mobileImg from '@/assets/project-mobile.jpg';
+import { portfolioConfig } from '@/config/portfolio';
 
 export function Projects() {
   const { t } = useLanguage();
-
-  const projects = [
-    {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured e-commerce platform built with React, TypeScript, and Stripe integration. Features include product catalog, shopping cart, payment processing, and admin dashboard.',
-      image: ecommerceImg,
-      technologies: ['React', 'TypeScript', 'Node.js', 'Stripe', 'MongoDB'],
-      github: 'https://github.com/enriquedevars/ecommerce',
-      demo: 'https://ecommerce-demo.vercel.app'
-    },
-    {
-      title: 'Project Management Dashboard',
-      description: 'A comprehensive project management tool with task tracking, team collaboration, and real-time updates. Built with modern React patterns and state management.',
-      image: dashboardImg,
-      technologies: ['React', 'Redux', 'Chart.js', 'Socket.io', 'Express'],
-      github: 'https://github.com/enriquedevars/pm-dashboard',
-      demo: 'https://pm-dashboard.vercel.app'
-    },
-    {
-      title: 'Mobile Banking App',
-      description: 'A secure mobile banking application with biometric authentication, transaction history, and financial insights. Optimized for performance and security.',
-      image: mobileImg,
-      technologies: ['React Native', 'TypeScript', 'Firebase', 'Biometrics', 'Chart.js'],
-      github: 'https://github.com/enriquedevars/mobile-banking',
-      demo: 'https://banking-app-demo.vercel.app'
-    }
-  ];
+  const { projects } = portfolioConfig;
 
   return (
     <section id="projects" className="py-20 bg-muted/30">

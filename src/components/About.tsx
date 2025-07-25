@@ -1,32 +1,11 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
-import { Code2, Users, Lightbulb, Award } from 'lucide-react';
+import { getIconComponent } from '@/lib/icon-utils';
+import { portfolioConfig } from '@/config/portfolio';
 
 export function About() {
   const { t } = useLanguage();
-
-  const highlights = [
-    {
-      icon: Code2,
-      title: '5+ Years',
-      description: 'Professional Experience'
-    },
-    {
-      icon: Users,
-      title: '20+ Projects',
-      description: 'Successfully Delivered'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Modern Tech',
-      description: 'Latest Technologies'
-    },
-    {
-      icon: Award,
-      title: 'Quality Focus',
-      description: 'Best Practices'
-    }
-  ];
+  const { about } = portfolioConfig;
 
   return (
     <section id="about" className="py-20 bg-background">
@@ -43,17 +22,17 @@ export function About() {
             {/* Text Content */}
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                {t('about.description')}
+                {about.description}
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                {t('about.experience')}
+                {about.experience}
               </p>
             </div>
 
             {/* Highlights Grid */}
             <div className="grid grid-cols-2 gap-4">
-              {highlights.map((highlight, index) => {
-                const Icon = highlight.icon;
+              {about.highlights.map((highlight, index) => {
+                const Icon = getIconComponent(highlight.icon);
                 return (
                   <Card 
                     key={index}

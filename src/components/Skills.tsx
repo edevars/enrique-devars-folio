@@ -1,41 +1,10 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
+import { portfolioConfig } from '@/config/portfolio';
 
 export function Skills() {
   const { t } = useLanguage();
-
-  const skillCategories = [
-    {
-      title: t('skills.frontend'),
-      skills: [
-        { name: 'React', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Next.js', level: 85 },
-        { name: 'Tailwind CSS', level: 88 },
-        { name: 'Vue.js', level: 75 }
-      ]
-    },
-    {
-      title: t('skills.backend'),
-      skills: [
-        { name: 'Node.js', level: 88 },
-        { name: 'Python', level: 82 },
-        { name: 'PostgreSQL', level: 85 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'GraphQL', level: 78 }
-      ]
-    },
-    {
-      title: t('skills.tools'),
-      skills: [
-        { name: 'AWS', level: 85 },
-        { name: 'Docker', level: 82 },
-        { name: 'Git', level: 92 },
-        { name: 'Jest', level: 88 },
-        { name: 'Figma', level: 75 }
-      ]
-    }
-  ];
+  const { skills } = portfolioConfig;
 
   return (
     <section id="skills" className="py-20 bg-background">
@@ -50,7 +19,7 @@ export function Skills() {
 
           {/* Skills Categories */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skillCategories.map((category, categoryIndex) => (
+            {skills.categories.map((category, categoryIndex) => (
               <Card 
                 key={categoryIndex}
                 className="group hover:shadow-medium transition-all duration-300 hover:scale-[1.02] border-border/50"
@@ -87,10 +56,7 @@ export function Skills() {
           {/* Technology Icons/Badges */}
           <div className="mt-16">
             <div className="flex flex-wrap justify-center gap-6">
-              {[
-                'React', 'TypeScript', 'Node.js', 'AWS', 'Docker', 'PostgreSQL', 
-                'MongoDB', 'GraphQL', 'Jest', 'Tailwind CSS', 'Next.js', 'Vue.js'
-              ].map((tech, index) => (
+              {skills.technologies.map((tech, index) => (
                 <div 
                   key={index}
                   className="px-4 py-2 bg-card border border-border rounded-lg shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-105 group"

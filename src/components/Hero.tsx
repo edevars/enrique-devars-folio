@@ -1,10 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
-import profilePhoto from '@/assets/profile-photo.jpg';
+import { portfolioConfig } from '@/config/portfolio';
 
 export function Hero() {
   const { t } = useLanguage();
+  const { personal, contact } = portfolioConfig;
 
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -18,16 +19,16 @@ export function Hero() {
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left animate-fade-in">
             <p className="text-muted-foreground text-lg mb-4 animate-slide-in">
-              {t('home.greeting')}
+              {personal.greeting}
             </p>
             <h1 className="text-5xl lg:text-7xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent animate-slide-in">
-              Enrique Devars
+              {personal.name}
             </h1>
             <h2 className="text-2xl lg:text-3xl font-semibold text-foreground/90 mb-6 animate-slide-in">
-              {t('home.title')}
+              {personal.title}
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl animate-slide-in">
-              {t('home.subtitle')}
+              {personal.subtitle}
             </p>
             
             {/* CTA Buttons */}
@@ -38,18 +39,23 @@ export function Hero() {
               >
                 {t('home.cta')}
               </Button>
-              <Button 
-                variant="outline" 
-                className="border-primary/20 hover:bg-primary/5"
-              >
-                Download CV
-              </Button>
+              {personal.cvUrl && (
+                <Button 
+                  variant="outline" 
+                  className="border-primary/20 hover:bg-primary/5"
+                  asChild
+                >
+                  <a href={personal.cvUrl} target="_blank" rel="noopener noreferrer">
+                    Download CV
+                  </a>
+                </Button>
+              )}
             </div>
 
             {/* Social Links */}
             <div className="flex justify-center lg:justify-start space-x-6 animate-fade-in">
               <a 
-                href="https://github.com" 
+                href={contact.social.github} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
@@ -57,7 +63,7 @@ export function Hero() {
                 <Github className="h-6 w-6" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href={contact.social.linkedin} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
@@ -65,7 +71,7 @@ export function Hero() {
                 <Linkedin className="h-6 w-6" />
               </a>
               <a 
-                href="mailto:enrique@example.com"
+                href={`mailto:${contact.email}`}
                 className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:scale-110 transform"
               >
                 <Mail className="h-6 w-6" />
@@ -78,8 +84,8 @@ export function Hero() {
             <div className="relative">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-large animate-float">
                 <img 
-                  src={profilePhoto} 
-                  alt="Enrique Devars" 
+                  src={personal.profilePhoto} 
+                  alt={personal.name} 
                   className="w-full h-full object-cover"
                 />
               </div>
