@@ -78,7 +78,7 @@ export const portfolioConfig: PortfolioConfig = {
     title: "Your Title",
     subtitle: "Your subtitle or tagline",
     greeting: "Hello, I'm",
-    profilePhoto: "/src/assets/profile-photo.jpg",
+    profilePhoto: "/src/assets/profile-photo.png",
     cvUrl: "/path-to-your-cv.pdf" // Optional
   },
 

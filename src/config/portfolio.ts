@@ -77,7 +77,7 @@ const content = {
       title: "Software Engineer",
       subtitle: "Building elegant solutions with modern technologies",
       greeting: "Hello, I'm",
-      profilePhoto: "/src/assets/profile-photo.jpg",
+      profilePhoto: "/src/assets/profile-photo.png",
       cvUrl: "/path-to-cv.pdf"
     },
     about: {
@@ -182,7 +182,7 @@ const content = {
       title: "Ingeniera de Software",
       subtitle: "Construyendo soluciones elegantes con tecnologías modernas",
       greeting: "Hola, soy",
-      profilePhoto: "/src/assets/profile-photo.jpg",
+      profilePhoto: "/src/assets/profile-photo.png",
       cvUrl: "/path-to-cv.pdf"
     },
     about: {
@@ -289,7 +289,7 @@ export const portfolioConfig: PortfolioConfig = {
     title: "Software Engineer",
     subtitle: "Building elegant solutions with modern technologies",
     greeting: "Hello, I'm",
-    profilePhoto: "/src/assets/profile-photo.jpg",
+    profilePhoto: "/src/assets/profile-photo.png",
     cvUrl: "/path-to-cv.pdf"
   },
 

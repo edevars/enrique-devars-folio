@@ -55,7 +55,7 @@ const content = {
       title: "${title}",
       subtitle: "${subtitle}",
       greeting: "Hello, I'm",
-      profilePhoto: "/src/assets/profile-photo.jpg",
+      profilePhoto: "/src/assets/profile-photo.png",
       cvUrl: "/path-to-your-cv.pdf"
     },
     about: {
@@ -145,7 +145,7 @@ const content = {
       title: "${titleEs}",
       subtitle: "${subtitleEs}",
       greeting: "Hola, soy",
-      profilePhoto: "/src/assets/profile-photo.jpg",
+      profilePhoto: "/src/assets/profile-photo.png",
       cvUrl: "/path-to-your-cv.pdf"
     },
     about: {
@@ -237,7 +237,7 @@ export const portfolioConfig: PortfolioConfig = {
     title: "${title}",
     subtitle: "${subtitle}",
     greeting: "Hello, I'm",
-    profilePhoto: "/src/assets/profile-photo.jpg",
+    profilePhoto: "/src/assets/profile-photo.png",
     cvUrl: "/path-to-your-cv.pdf" // Optional - update this path
   },
 
@@ -365,7 +365,7 @@ export { content };
   console.log('• All content automatically translates');
   console.log('• Form placeholders and UI text translated');
   console.log('\n📝 Next steps:');
-  console.log('1. Update your profile photo in src/assets/profile-photo.jpg');
+  console.log('1. Update your profile photo in src/assets/profile-photo.png');
   console.log('2. Add your project images to src/assets/');
   console.log('3. Update the projects section with your actual projects');
   console.log('4. Customize the skills section with your skills and levels');
